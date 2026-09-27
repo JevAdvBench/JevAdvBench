@@ -44,12 +44,14 @@ responses = load_dataset("Hangtao/JevAdvBench", "responses", split="test")  # 11
 
 | File | Contents |
 |---|---|
-| [`data/beta1.0.json`](data/beta1.0.json) | The clean benchmark: 66 scenarios, 812 questions (314 Noul, 337 Choice, 161 Score) with labels and their provenance |
-| [`data/ADbeta1.0.json`](data/ADbeta1.0.json) | The attack suite: for every question, the 12 single-edit variants (9,744 in total) with the edited slot, inserted text, attack target and generation metadata |
+| [`data/Bench1.0.json`](data/Bench1.0.json) | The clean benchmark: 66 scenarios, 812 questions (314 Noul, 337 Choice, 161 Score) with labels and their provenance |
+| [`data/AdvBench1.0.json`](data/AdvBench1.0.json) | The attack suite: for every question, the 12 single-edit variants (9,744 in total) with the edited slot, inserted text, attack target and generation metadata |
 | [`evidence/`](evidence) | All 11,368 raw API responses (10,556 evaluation requests and 812 identical re-runs) with billing, timing and the SHA-256 of every request body, as a split, checksummed archive |
 
 Both JSON files follow `scenarios → questions → {noul, choice, score} → [question]`.
-Each question has a `question` (the typed request: `type`, `instructions`, `criteria`), a `standard_answer` with its `source` (`human_review` for 143 questions, `jev_default` for the 669 whose label is the model's own five-run consensus) and, in ADbeta1.0, an `adversarial.samples` list with one record per attack (`id`, `target_path`, `injected_text`, `target_answer`, `perturbed_question_text`, `perturbed_state`, ...).
+The datasets use English titles, annotation notes, and documentation (`documentation`). Evaluation inputs, labels, provenance, and raw attack strings are unchanged from the original beta release. Historical generation metadata and scripts retain their original filenames and hashes.
+
+Each question has a `question` (the typed request: `type`, `instructions`, `criteria`), a `standard_answer` with its `source` (`human_review` for 143 questions, `jev_default` for the 669 whose label is the model's own five-run consensus) and, in AdvBench1.0, an `adversarial.samples` list with one record per attack (`id`, `target_path`, `injected_text`, `target_answer`, `perturbed_question_text`, `perturbed_state`, ...).
 Because 82.4% of labels are model-derived, the paper's primary metric does not use labels at all.
 
 | Domain | Scenarios | Questions | Noul | Choice | Score | Human-reviewed |
@@ -141,8 +143,8 @@ The scripts in [`code/`](code) regenerate the attack variants and query `jev-1.1
 JevAdvBench/
 ├── paper.pdf
 ├── data/
-│   ├── beta1.0.json         812 clean typed questions over 66 scenarios
-│   └── ADbeta1.0.json       9,744 single-edit attack variants
+│   ├── Bench1.0.json         812 clean typed questions over 66 scenarios
+│   └── AdvBench1.0.json       9,744 single-edit attack variants
 ├── evidence/                11,368 raw responses (split archive) + restore/verify script
 ├── data_analysis/           offline analysis; run_all.sh regenerates results/
 ├── results/                 paper-level tables and the comparison with the paper
