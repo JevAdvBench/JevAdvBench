@@ -2,7 +2,8 @@
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper.pdf)
 [![Project page](https://img.shields.io/badge/Project-page-green)](https://jevadvbench.github.io/JevAdvBench/)
-[![arXiv](https://img.shields.io/badge/arXiv-coming%20soon-b31b1b)](#citation)
+[![arXiv](https://img.shields.io/badge/arXiv-2609.31142-b31b1b)](https://arxiv.org/abs/2609.31142)
+[![Hugging Face Paper](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow)](https://huggingface.co/papers/2609.31142)
 [![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/Hangtao/JevAdvBench)
 [![Code license: MIT](https://img.shields.io/badge/code-MIT-lightgrey)](LICENSE)
 [![Data license: CC BY-NC 4.0](https://img.shields.io/badge/data-CC%20BY--NC%204.0-lightgrey)](https://creativecommons.org/licenses/by-nc/4.0/)
@@ -24,7 +25,10 @@ In contrast, one unverified opinion appended to the state flips 12.1% of decisio
       title={JevAdvBench: A Benchmark and Black-Box Attacks for Reinforcement Learning for Calibrated Decisions Models},
       author={Jianyi Hu and Hangtao Zhang and Yi Liu and Yeqi Zeng and Li Zeng and Xianlong Wang and Rui Wang and Leo Yu Zhang},
       year={2026},
-      note={Preprint}
+      eprint={2609.31142},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2609.31142},
 }
 ```
 

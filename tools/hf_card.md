@@ -30,7 +30,7 @@ configs:
 
 # JevAdvBench
 
-[Project page](https://jevadvbench.github.io/JevAdvBench/) · [Code](https://github.com/JevAdvBench/JevAdvBench)
+[Paper (arXiv:2609.31142)](https://arxiv.org/abs/2609.31142) · [Project page](https://jevadvbench.github.io/JevAdvBench/) · [Code](https://github.com/JevAdvBench/JevAdvBench)
 
 **JevAdvBench** is, to our knowledge, the first adversarial benchmark for models trained with reinforcement
 learning for calibrated decisions (RLCD), such as Jev. These models answer a typed question about an input,
@@ -133,6 +133,9 @@ examples keep their original terms. Code in the GitHub repository is MIT.
       title={JevAdvBench: A Benchmark and Black-Box Attacks for Reinforcement Learning for Calibrated Decisions Models},
       author={Jianyi Hu and Hangtao Zhang and Yi Liu and Yeqi Zeng and Li Zeng and Xianlong Wang and Rui Wang and Leo Yu Zhang},
       year={2026},
-      note={Preprint}
+      eprint={2609.31142},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2609.31142},
 }
 ```
